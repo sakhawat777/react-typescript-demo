@@ -5,6 +5,7 @@ type PersonListProps = {
         lastName: string
     } []
 }
+// object in array props
 const PersonList = (props: PersonListProps) => {
     return (
         <div>

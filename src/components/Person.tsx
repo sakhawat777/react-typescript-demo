@@ -5,7 +5,7 @@ type personProps = {
         lastName: string
     }
 }
-
+// props
 const Person = (props: personProps) => {
     return (
         <div>
