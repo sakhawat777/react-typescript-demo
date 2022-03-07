@@ -12,8 +12,8 @@ import Counter from './components/state/Counter';
 import LoggedIn from './components/state/LoggedIn';
 import User from './components/state/User';
 import Status from './components/Status';
-
-
+import ThemeContextProvider from './components/context/ThemeContext';
+import Box from './components/context/Box';
 
 
 function App() {
@@ -52,6 +52,9 @@ function App() {
      <LoggedIn/>
      <User/>
      <Counter/>
+     <ThemeContextProvider>
+       <Box/>
+     </ThemeContextProvider>
     </div>
   );
 }
