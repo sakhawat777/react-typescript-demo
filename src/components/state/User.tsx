@@ -5,7 +5,11 @@ type AuthUser = {
     email: string
 }
 const User = () => {
-    const [user, setUser] = useState<AuthUser | null>(null);
+    // like as type inference <AuthUser | null>
+   const [user, setUser] = useState<AuthUser | null>(null);
+   
+   // useState Type Assertion
+//    const [user, setUser] = useState<AuthUser>({} as AuthUser);
     const handleLogIn = () => {
        setUser({
            name: "Tina",
@@ -13,7 +17,9 @@ const User = () => {
        })
     }
     const handleLogOut = () => {
-       setUser(null)
+        // Log out can't work when used useState Type Assertion
+        // No need  handleLogOut() method
+      setUser(null)
     }
    
     return (
@@ -23,6 +29,8 @@ const User = () => {
             {/* optional ? */}
             <div>User name is {user?.name}</div>
             <div>User email is {user?.email}</div>
+            {/* <div>User name is {user.name}</div>
+            <div>User email is {user.email}</div> */}
         </div>
     );
 };
