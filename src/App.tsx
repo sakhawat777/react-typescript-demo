@@ -14,6 +14,9 @@ import User from './components/state/User';
 import Status from './components/Status';
 import ThemeContextProvider from './components/context/ThemeContext';
 import Box from './components/context/Box';
+import { UserContextProvider} from './components/context/UserContext';
+import { User2 } from './components/context/User2';
+
 
 
 function App() {
@@ -26,7 +29,7 @@ function App() {
     lastName: "Chowdhury",
   },
   {
-    firstName: "Biplob",
+    firstName: "Mina",
     lastName: "Chowdhury",
   },
   {
@@ -36,6 +39,7 @@ function App() {
 ]
   return (
     <div className="App">
+       
      <Greet name = "Sakhawat" messageCount={10} isLoggedIn={true}/>
      <Person name= {personName}/>
      <PersonList names = {nameList}/>
@@ -55,6 +59,9 @@ function App() {
      <ThemeContextProvider>
        <Box/>
      </ThemeContextProvider>
+     <UserContextProvider>
+       <User2/>
+     </UserContextProvider>
     </div>
   );
 }
