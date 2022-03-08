@@ -22,6 +22,7 @@ import Counter2 from './components/class/Counter2';
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
 import { List } from './components/generic/list';
+import { RandomNumber } from './components/restriction/RandomNumber';
 
 
 
@@ -92,6 +93,7 @@ function App() {
         last: 'Khan',
       },
     ]} onClick={(item) => console.log(item)}/> */}
+    <RandomNumber value={10} isPositive/>
     </div>
     
   );
