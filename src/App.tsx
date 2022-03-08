@@ -21,6 +21,7 @@ import DomRef from './components/ref/DomRef';
 import Counter2 from './components/class/Counter2';
 import { Private } from './components/auth/Private';
 import { Profile } from './components/auth/Profile';
+import { List } from './components/generic/list';
 
 
 
@@ -72,7 +73,27 @@ function App() {
      <MutableRef/>
      <Counter2 message=' The count value is'/>
      <Private isLoggedIn={true} component={Profile}/>
+     <List items={['BatMan', 'SuperMan', 'SpiderMan']} onClick={(item) => console.log(item)}/>
+     <List items={[10, 100, 1000]} onClick={(item) => console.log(item)}/>
+     {/* <List items={[
+      {
+        id: 1,
+        first: 'Lina',
+        last: 'Khan',
+      },
+      {
+        id: 2,
+        first: 'Nina',
+        last: 'Khan',
+      },
+      {
+        id: 3,
+        first: 'Tina',
+        last: 'Khan',
+      },
+    ]} onClick={(item) => console.log(item)}/> */}
     </div>
+    
   );
 }
 
