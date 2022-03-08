@@ -19,6 +19,9 @@ import { User2 } from './components/context/User2';
 import MutableRef from './components/ref/MutableRef';
 import DomRef from './components/ref/DomRef';
 import Counter2 from './components/class/Counter2';
+import { Private } from './components/auth/Private';
+import { Profile } from './components/auth/Profile';
+
 
 
 
@@ -68,6 +71,7 @@ function App() {
      <DomRef/>
      <MutableRef/>
      <Counter2 message=' The count value is'/>
+     <Private isLoggedIn={true} component={Profile}/>
     </div>
   );
 }
