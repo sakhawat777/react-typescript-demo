@@ -25,6 +25,7 @@ import { List } from './components/generic/list';
 import { RandomNumber } from './components/restriction/RandomNumber';
 import { Toast } from './components/templateLiterals/Toast';
 import { CustomButton } from './components/html/Button';
+import { CustomComponent } from './components/html/CustomComponent';
 
 
 
@@ -98,7 +99,7 @@ function App() {
     <RandomNumber value={10} isPositive/>
     <Toast position='center'/>
     <CustomButton variant='primary' onClick={() => console.log('Clicked')}>Primary Button</CustomButton>
-    
+    <CustomComponent name='Neela' isLoggedIn/>
    
     </div>
     
